@@ -1,0 +1,43 @@
+/*
+<section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+*/
+.new-tweet {
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+}
+
+.tweet-form{
+  display: flex;
+  flex-direction:column;
+}
+
+.input {
+  background-color: #f4f1ec;
+  border: 0px;
+  border-bottom: 5px solid #545149;
+}
+
+.button-char-count{
+  display: flex;
+  justify-content:space-between;
+  font-family: "Bungee";
+  margin-top: 0.5em;
+}
+
+.tweet-button {
+  background-color: #4056A1;
+  color:white;
+}
+
+

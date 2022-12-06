@@ -13,7 +13,7 @@ nav {
   top: 0;
 }
 
-.logo {
+nav>span {
   font-family: "Bungee"
 }
 
