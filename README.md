@@ -4,6 +4,23 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
+## Extra-Features
+- Compose Tweet:
+  - Slide down and auto-focus when 'Write a new tweet' is clicked in nav bar
+  - slide up when clicked again
+- Scroll up button:
+  - Focused on bottom right of screen
+  - Will appear and disappear once scrolled
+- Media sizing:
+  - will resize for desktop/tablet & mobile enviroments
+- Animated down arrow button (bounces)
+
+## Screenshots
+### Mobile View
+!["Mobile-View"]()
+### Tablet/Desktop View
+!["Tablet-Desktop-View"]()
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
@@ -16,3 +33,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
