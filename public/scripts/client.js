@@ -23,8 +23,9 @@ const scrollToTop = () => {
 const unhideMsgBox = () => {
 
   if ($('.new-tweet').css('display') == 'none') {
-    return $('.new-tweet').slideDown("slow", () => { });
-
+    $('.new-tweet').slideDown("slow", () => { });
+    $('#tweet-text').focus()
+    return 
   } else {
     return $('.new-tweet').slideUp();
   }

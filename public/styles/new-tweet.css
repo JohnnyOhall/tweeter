@@ -1,5 +1,6 @@
 .new-tweet {
   display: none;
+  margin-top: 2%
 }
 
 form>div:nth-child(1) {
