@@ -17,9 +17,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 ### Mobile View
-!["Mobile-View"](https://github.com/JohnnyOhall/tweeter/blob/main/screenshots/mobile-view.PNG)
+!["Mobile-View"](https://github.com/JohnnyOhall/tweeter/blob/master/screenshots/mobile-view.PNG)
 ### Tablet/Desktop View
-!["Tablet-Desktop-View"](https://github.com/JohnnyOhall/tweeter/blob/main/screenshots/desktop-tablet-view.PNG)
+!["Tablet-Desktop-View"](https://github.com/JohnnyOhall/tweeter/blob/master/screenshots/desktop-tablet-view.PNG)
 
 ## Getting Started
 
