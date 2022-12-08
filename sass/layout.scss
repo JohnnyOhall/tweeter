@@ -1,3 +1,9 @@
+$bodyFont: "Source Sans Pro"; 
+$defaultFont: sans-serif;
+$backgroundColour: #f4f1ec;
+$bodyFontColour: #545149;
+$themeColour2: firebrick;
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -16,11 +22,13 @@ html {
 /*
  * Global layout stuff
  */
+
+ 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $bodyFontColour;
+  background-color: $backgroundColour;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $bodyFont, $defaultFont;
 }
 
 .container {
@@ -29,5 +37,5 @@ body {
 }
 
 .red {
-  color: firebrick;
+  color: $themeColour2;
 }

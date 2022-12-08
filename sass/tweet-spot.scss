@@ -9,7 +9,7 @@ hr {
   border-bottom: 5px solid #545149;
 }
 
-.tweet-head > div:nth-child(2) {
+.tweet-head>div:nth-child(2) {
   color: #aaa69a;
 }
 
@@ -19,6 +19,7 @@ article {
   margin-bottom: 15px;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -26,12 +27,12 @@ header {
   align-items: center;
 }
 
-header > div {
+header>div {
   display: flex;
   align-items: center;
 }
 
-footer > div {
+footer>div {
   display: flex;
   justify-content: space-between;
   padding: 0 10px 5px 10px;
@@ -39,11 +40,11 @@ footer > div {
   font-size: medium;
 }
 
-header > div > i {
+header>div>i {
   padding-left: 10px;
 }
 
-footer > div > div {
+footer>div>div {
   display: flex;
   justify-content: space-evenly;
   width: 100px;
@@ -96,3 +97,4 @@ article:hover {
   font-size: 75px;
   cursor: pointer;
 }
+

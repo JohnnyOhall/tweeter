@@ -1,10 +1,14 @@
+$themeColour1: #4056A1;
+$themeColour2: firebrick;
+$themeFont: "Bungee";
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: $themeColour1;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -12,11 +16,11 @@ nav {
   top: 0;
 }
 
-nav > span {
-  font-family: "Bungee";
+nav>span {
+  font-family: $themeFont;
 }
 
-nav > div {
+nav>div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,76 +37,36 @@ nav > div {
 }
 
 .fa-angles-down {
-  color: firebrick;
+  color: $themeColour2;
 }
 
 @-webkit-keyframes bounce {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -0.2em;
-  }
-  70% {
-    top: -0.3em;
-  }
-  100% {
-    top: 0;
-  }
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
 }
 @-moz-keyframes bounce {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -0.2em;
-  }
-  70% {
-    top: -0.3em;
-  }
-  100% {
-    top: 0;
-  }
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
 }
 @-o-keyframes bounce {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -0.2em;
-  }
-  70% {
-    top: -0.3em;
-  }
-  100% {
-    top: 0;
-  }
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
 }
 @-ms-keyframes bounce {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -0.2em;
-  }
-  70% {
-    top: -0.3em;
-  }
-  100% {
-    top: 0;
-  }
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
 }
 @keyframes bounce {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -0.2em;
-  }
-  70% {
-    top: -0.3em;
-  }
-  100% {
-    top: 0;
-  }
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
 }
