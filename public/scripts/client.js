@@ -9,6 +9,12 @@ $(document).ready(function() {
   $newTweet.on('submit', tweetSubmitted)
 }); 
 
+const escape = (str) => {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 //Takes tweet submitted and loads to server without page
 const tweetSubmitted = (e) => {
   e.preventDefault();
@@ -59,7 +65,7 @@ const createTweetElement = function(tweet) {
         </div>
         <div><i><strong>${tweet.user.handle}</strong></i></div>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
       <footer>
         <hr>
         <div>
