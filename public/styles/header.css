@@ -1,21 +1,9 @@
-header {
-  display: flex;
+.page-header {
   flex-direction:column;
   justify-content:flex-end;
-  align-items: center;
   margin-top: 120px;
   height: 400px;
-  width: 100%;
+  color: white;
   background-color: slategray;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
-
-
-
-/*
-The visible portion of the header should have a height of 400px and be 100% the width of its parent container
-The avatar should be centered vertically and horizontally (Hint: the justify-content and align-items properties 
-  are helpful for centering things if you're using Flexbox.)
-The name should be centered below the avatar
-The background-color should be a different colour than the nav and the body
-*/
