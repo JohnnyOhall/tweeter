@@ -4,7 +4,7 @@
 
 $(document).ready(function() {
   const $newTweet = $('#new-tweet');
-  
+
   loadTweets(); 
   $newTweet.on('submit', tweetSubmitted)
 }); 
@@ -12,6 +12,15 @@ $(document).ready(function() {
 //Takes tweet submitted and loads to server without page
 const tweetSubmitted = (e) => {
   e.preventDefault();
+
+  if (!$('#tweet-text').val()) {
+    return alert('Invalid Submission');
+  }
+
+  if ($('#tweet-text').val().length > 140) {
+    return alert('Message exceeds limits');
+  }
+
   const data = $('#new-tweet').serialize()
 
   $.post('/tweets', data, () => {
@@ -29,7 +38,7 @@ const loadTweets = () => {
 
 //Loops through array of tweet objects and appends each to index.html
 const renderTweets = function(tweets) {
-  $('.tweet-spot').empty()
+  $('.tweet-spot').empty();
 
   for (const tweet of tweets){ // loops through tweets
     let $tweet = createTweetElement(tweet) // calls createTweetElement for each tweet
