@@ -20,11 +20,13 @@ const tweetSubmitted = (e) => {
   e.preventDefault();
 
   if (!$('#tweet-text').val()) {
-    return alert('Invalid Submission');
+    $('#error-msg-null').slideDown("slow", () => {});
+    return setTimeout(() => $('.errors').slideUp(), 5000);
   }
 
   if ($('#tweet-text').val().length > 140) {
-    return alert('Message exceeds limits');
+    $('#error-msg-length').slideDown("slow", () => {});
+    return setTimeout(() => $('.errors').slideUp(), 5000);
   }
 
   const data = $('#new-tweet').serialize()

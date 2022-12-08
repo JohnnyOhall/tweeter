@@ -59,6 +59,16 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+      <div id="error-msg-length" class="errors">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Message exceeds limits - Please write only 140 characters!</span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div id="error-msg-null" class="errors">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Invalid Submission - Please enter a message!</span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
       <h2>Compose Tweet</h2>
       <form id="new-tweet">
         <div>
