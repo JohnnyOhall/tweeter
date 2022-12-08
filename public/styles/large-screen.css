@@ -8,8 +8,17 @@
   border-radius: 10%;
 }
 
-nav > span {
+nav {
+  background-color: #4056A1;
+}
+nav span {
   font-size: 50px;
+}
+nav div span {
+  font-size: 25px;
+}
+nav div .fa-angles-down {
+  color: firebrick;
 }
 
 .tweet-spot {

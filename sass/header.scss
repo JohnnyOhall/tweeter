@@ -3,7 +3,7 @@
 .page-header {
   @include base.alignColCenter;
   justify-content: flex-end;
-  margin-top: 120px;
+  /*margin-top: 120px;*/
   height: 400px;
   color: white;
   background-color: base.$themeColour2;

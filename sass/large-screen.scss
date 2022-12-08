@@ -10,8 +10,24 @@
   border-radius: 10%;
 }
 
-nav>span {
-  font-size: 50px;
+nav {
+  background-color: base.$themeColour1;
+  
+  span {
+    font-size: 50px;
+  }
+
+  div {
+    span {
+      font-size: 25px;
+    }
+
+    .fa-angles-down {
+      color: base.$themeColour2;
+    }
+  }
+  
+
 }
 
 .tweet-spot {

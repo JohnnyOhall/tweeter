@@ -5,7 +5,7 @@ nav {
   align-items: center;
   height: 120px;
   width: 100%;
-  background-color: base.$themeColour1;
+  background-color: transparent;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -25,7 +25,7 @@ nav {
     }
 
     .fa-angles-down {
-      color: base.$themeColour2;
+      color: base.$themeColour1;
     }
   }
 }
