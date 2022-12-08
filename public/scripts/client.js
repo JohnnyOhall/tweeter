@@ -1,13 +1,12 @@
-//  * Client-side JS logic goes here
-//  * jQuery is already loaded
-//  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
-
-$(document).ready(function() {
+$(document).ready(function () {
   const $newTweet = $('#new-tweet');
+  const $revealTweet = $('#tweet-reveal');
 
-  loadTweets(); 
-  $newTweet.on('submit', tweetSubmitted)
-}); 
+  loadTweets();
+  $newTweet.on('submit', tweetSubmitted);
+  $revealTweet.on('click', unhideMsgBox)
+
+});
 
 const escape = (str) => {
   let div = document.createElement("div");
@@ -15,48 +14,59 @@ const escape = (str) => {
   return div.innerHTML;
 };
 
+const unhideMsgBox = () => {
+
+  if ($('.new-tweet').css('display') == 'none') {
+    return $('.new-tweet').slideDown("slow", () => { });
+
+  } else {
+    return $('.new-tweet').slideUp();
+  }
+  
+}
+
 //Takes tweet submitted and loads to server without page
 const tweetSubmitted = (e) => {
   e.preventDefault();
 
-  if (!$('#tweet-text').val()) {
-    $('#error-msg-null').slideDown("slow", () => {});
-    return setTimeout(() => $('.errors').slideUp(), 5000);
+  if (!$('#tweet-text').val()) { // shows error message if falsey input ('', null etc.)
+    $('#error-msg-null').slideDown("slow", () => { });
+    return setTimeout(() => $('.errors').slideUp(), 4000);
   }
 
-  if ($('#tweet-text').val().length > 140) {
-    $('#error-msg-length').slideDown("slow", () => {});
-    return setTimeout(() => $('.errors').slideUp(), 5000);
+  if ($('#tweet-text').val().length > 140) { // shows error message if over 140 characters
+    $('#error-msg-length').slideDown("slow", () => { });
+    return setTimeout(() => $('.errors').slideUp(), 4000);
   }
 
-  const data = $('#new-tweet').serialize()
+  const data = $('#new-tweet').serialize();
 
   $.post('/tweets', data, () => {
-    $("#tweet-text").val('')
-    $('#tweet-counter').text(140)
+    $("#tweet-text").val('');
+    $('#tweet-counter').text(140);
     loadTweets();
   });
-}
+};
 
 const loadTweets = () => {
-  $.get('/tweets', (data)=> {
-    renderTweets(data)
-  })
-}
+  $.get('/tweets', (data) => {
+    renderTweets(data);
+  });
+};
 
 //Loops through array of tweet objects and appends each to index.html
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   $('.tweet-spot').empty();
 
-  for (const tweet of tweets){ // loops through tweets
-    let $tweet = createTweetElement(tweet) // calls createTweetElement for each tweet
+  for (const tweet of tweets) { // loops through tweets
+    let $tweet = createTweetElement(tweet); // calls createTweetElement for each tweet
     $('.tweet-spot').prepend($tweet); // takes return value and appends it to the tweets container
   }
 
-}
+};
 
 //Takes tweet object and builds html template to pass to renderTweets
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
 
   let $tweet = `
     <article>
@@ -81,10 +91,10 @@ const createTweetElement = function(tweet) {
         </div>
       </footer>
     </article>
-  `
+  `;
 
   return $tweet;
 
-}
+};
 
 

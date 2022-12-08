@@ -1,6 +1,10 @@
-form > div:nth-child(1) {
+.new-tweet {
+  display: none;
+}
+
+form>div:nth-child(1) {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 textarea {
@@ -11,16 +15,16 @@ textarea {
   font-weight: bold;
 }
 
-form > div:nth-child(2) {
+form>div:nth-child(2) {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   font-family: "Bungee";
   margin-top: 0.5em;
 }
 
 button {
   background-color: #4056A1;
-  color:white;
+  color: white;
   border-radius: 10px;
 }
 
