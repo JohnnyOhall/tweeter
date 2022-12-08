@@ -1,90 +1,91 @@
+@use 'base';
+
 .tweet-spot {
   margin-top: 15px;
+
+  article {
+    border: 3px solid;
+    border-radius: 15px;
+    margin-bottom: 15px;
+
+    .tweet-head {
+      @include base.alignSpaceBetween;
+      padding: 10px 20px;
+      align-items: center;
+    
+      div {
+        display: flex;
+        align-items: center;
+    
+        i {
+          padding-left: 10px;
+        }
+      }
+    
+      div:nth-child(2) {
+        color: #aaa69a;
+        }
+    }
+
+  }
+
+  article:hover {
+    box-shadow: 5px 5px base.$themeColour1;
+  }
+
+  p {
+    margin: 5px;
+    padding: 10px;
+    word-wrap: break-word;
+  }
+
+  footer {
+    padding-bottom: 10px;
+  
+    hr {
+      margin: 2em;
+      font-size: 25%;
+      border: 0px;
+      border-bottom: 5px solid base.$borderColour;
+    }
+  
+    div {
+      @include base.alignSpaceBetween;
+      padding: 0 10px 5px 10px;
+      align-items: center;
+      font-size: medium;
+  
+      div {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100px;
+        font-size: x-large;
+        color: base.$themeColour1;
+  
+        .fa-flag:hover {
+          color: base.$themeColour2;
+          cursor: pointer;
+        }
+        
+        .fa-retweet:hover {
+          color: base.$themeColour2;
+          cursor: pointer;
+        }
+      
+        .fa-heart:hover {
+          color: base.$themeColour2;
+          cursor: pointer;
+        }
+  
+        .likes {
+          font-size: x-small;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
 }
 
-hr {
-  margin: 2em;
-  font-size: 25%;
-  border: 0px;
-  border-bottom: 5px solid #545149;
-}
-
-.tweet-head>div:nth-child(2) {
-  color: #aaa69a;
-}
-
-article {
-  border: 3px solid;
-  border-radius: 15px;
-  margin-bottom: 15px;
-}
-
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  align-items: center;
-}
-
-header>div {
-  display: flex;
-  align-items: center;
-}
-
-footer>div {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px 5px 10px;
-  align-items: center;
-  font-size: medium;
-}
-
-header>div>i {
-  padding-left: 10px;
-}
-
-footer>div>div {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100px;
-  font-size: x-large;
-  color: #4056A1;
-}
-
-p {
-  margin: 5px;
-  padding: 10px;
-  word-wrap: break-word;
-}
-
-.likes {
-  font-size: x-small;
-  align-self: flex-start;
-}
-
-footer {
-  padding-bottom: 10px;
-}
-
-article:hover {
-  box-shadow: 5px 5px #4056A1;
-}
-
-.fa-flag:hover {
-  color: firebrick;
-  cursor: pointer;
-}
-
-.fa-retweet:hover {
-  color: firebrick;
-  cursor: pointer;
-}
-
-.fa-heart:hover {
-  color: firebrick;
-  cursor: pointer;
-}
 
 .fa-circle-up {
   display: none;
@@ -92,7 +93,7 @@ article:hover {
   bottom: 5%;
   right: 5%;
   background-color: white;
-  color: firebrick;
+  color: base.$themeColour2;
   border-radius: 100%;
   font-size: 75px;
   cursor: pointer;

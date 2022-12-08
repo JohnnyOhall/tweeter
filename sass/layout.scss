@@ -1,8 +1,5 @@
-$bodyFont: "Source Sans Pro"; 
-$defaultFont: sans-serif;
-$backgroundColour: #f4f1ec;
-$bodyFontColour: #545149;
-$themeColour2: firebrick;
+@use 'base';
+
 
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -25,10 +22,11 @@ html {
 
  
 body {
-  color: $bodyFontColour;
-  background-color: $backgroundColour;
+  color: base.$bodyFontColour;
+  background-color: base.$backgroundColour;
   font-size: 24px;
-  font-family: $bodyFont, $defaultFont;
+  font-family: base.$bodyFont, base.$defaultFont;
+  
 }
 
 .container {
@@ -37,5 +35,5 @@ body {
 }
 
 .red {
-  color: $themeColour2;
+  color: base.$themeColour2;
 }

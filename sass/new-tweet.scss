@@ -1,45 +1,50 @@
+@use 'base';
+
 .new-tweet {
   display: none;
-  margin-top: 2%
-}
+  margin-top: 2%;
 
-form>div:nth-child(1) {
-  display: flex;
-  flex-direction: column;
-}
+  .errors {
+    border: base.$themeColour2 4px solid;
+    background-color: base.$backgroundColour;
+    color: base.$themeColour2;
+    display: none;
+    margin: 30px 0;
+    justify-content: space-around;
+    padding: 10px;
+  }
 
-textarea {
-  background-color: #f4f1ec;
-  border: 0px;
-  border-bottom: 5px solid #545149;
-  color: #545149;
-  font-weight: bold;
-}
+  form {
 
-form>div:nth-child(2) {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Bungee";
-  margin-top: 0.5em;
-}
+    div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
 
-button {
-  background-color: #4056A1;
-  color: white;
-  border-radius: 10px;
-}
+      textarea {
+        background-color: base.$backgroundColour;
+        border: 0px;
+        border-bottom: 5px solid base.$borderColour;
+        color: base.$bodyFontColour;
+        font-weight: bold;
+      }
+    }
 
-button:hover {
-  background-color: #6e83c7;
-  cursor: pointer;
-}
+    div:nth-child(2) {
+      @include base.alignSpaceBetween;
+      font-family: base.$themeFont;
+      margin-top: 0.5em;
 
-.errors {
-  border: firebrick 4px solid;
-  background-color: #f4f1ec;
-  color: firebrick;
-  display: none;
-  margin: 30px 0;
-  justify-content: space-around;
-  padding: 10px;
+      button {
+        background-color: base.$themeColour1;
+        color: white;
+        border-radius: 10px;
+
+        button:hover {
+          background-color: base.$themeColour1;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
 }

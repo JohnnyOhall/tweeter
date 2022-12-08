@@ -1,5 +1,7 @@
+@use 'base';
+
 .page-header {
-  background-color: firebrick;
+  background-color: base.$themeColour2;
   margin-top: 2%;
   margin-left: 2%; 
   width: 30%;

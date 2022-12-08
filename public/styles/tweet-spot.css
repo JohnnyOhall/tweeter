@@ -1,88 +1,73 @@
 .tweet-spot {
   margin-top: 15px;
 }
-
-hr {
-  margin: 2em;
-  font-size: 25%;
-  border: 0px;
-  border-bottom: 5px solid #545149;
-}
-
-.tweet-head > div:nth-child(2) {
-  color: #aaa69a;
-}
-
-article {
+.tweet-spot article {
   border: 3px solid;
   border-radius: 15px;
   margin-bottom: 15px;
 }
-
-header {
+.tweet-spot article .tweet-head {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   align-items: center;
 }
-
-header > div {
+.tweet-spot article .tweet-head div {
   display: flex;
   align-items: center;
 }
-
-footer > div {
+.tweet-spot article .tweet-head div i {
+  padding-left: 10px;
+}
+.tweet-spot article .tweet-head div:nth-child(2) {
+  color: #aaa69a;
+}
+.tweet-spot article:hover {
+  box-shadow: 5px 5px #4056A1;
+}
+.tweet-spot p {
+  margin: 5px;
+  padding: 10px;
+  word-wrap: break-word;
+}
+.tweet-spot footer {
+  padding-bottom: 10px;
+}
+.tweet-spot footer hr {
+  margin: 2em;
+  font-size: 25%;
+  border: 0px;
+  border-bottom: 5px solid #545149;
+}
+.tweet-spot footer div {
   display: flex;
   justify-content: space-between;
   padding: 0 10px 5px 10px;
   align-items: center;
   font-size: medium;
 }
-
-header > div > i {
-  padding-left: 10px;
-}
-
-footer > div > div {
+.tweet-spot footer div div {
   display: flex;
   justify-content: space-evenly;
   width: 100px;
   font-size: x-large;
   color: #4056A1;
 }
-
-p {
-  margin: 5px;
-  padding: 10px;
-  word-wrap: break-word;
+.tweet-spot footer div div .fa-flag:hover {
+  color: firebrick;
+  cursor: pointer;
 }
-
-.likes {
+.tweet-spot footer div div .fa-retweet:hover {
+  color: firebrick;
+  cursor: pointer;
+}
+.tweet-spot footer div div .fa-heart:hover {
+  color: firebrick;
+  cursor: pointer;
+}
+.tweet-spot footer div div .likes {
   font-size: x-small;
   align-self: flex-start;
-}
-
-footer {
-  padding-bottom: 10px;
-}
-
-article:hover {
-  box-shadow: 5px 5px #4056A1;
-}
-
-.fa-flag:hover {
-  color: firebrick;
-  cursor: pointer;
-}
-
-.fa-retweet:hover {
-  color: firebrick;
-  cursor: pointer;
-}
-
-.fa-heart:hover {
-  color: firebrick;
-  cursor: pointer;
 }
 
 .fa-circle-up {

@@ -1,31 +1,36 @@
-$themeColour1: #4056A1;
-$themeColour2: firebrick;
-$themeFont: "Bungee";
+@use 'base';
 
 nav {
-  display: flex;
-  justify-content: space-between;
+  @include base.alignSpaceBetween;
   align-items: center;
   height: 120px;
   width: 100%;
-  background-color: $themeColour1;
+  background-color: base.$themeColour1;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
   position: fixed;
   top: 0;
+
+  span {
+    font-family: base.$themeFont;
+  }
+
+  div {
+    @include base.alignColCenter;
+    cursor: pointer;
+
+    span {
+      font-family: base.$bodyFont, base.$defaultFont;
+    }
+
+    .fa-angles-down {
+      color: base.$themeColour2;
+    }
+  }
 }
 
-nav>span {
-  font-family: $themeFont;
-}
-
-nav>div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
+/* ------------- ANIMATION ------------- */
 
 .bounce {
   display: inline-block;
@@ -34,39 +39,35 @@ nav>div {
   -o-animation: bounce 0.75s infinite linear;
   -webkit-animation: bounce 0.75s infinite linear;
   animation: bounce 0.75s infinite linear;
-}
 
-.fa-angles-down {
-  color: $themeColour2;
-}
-
-@-webkit-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
-}
-@-moz-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
-}
-@-o-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
-}
-@-ms-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
-}
-@keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
+  @-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+  }
+  @-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+  }
+  @-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+  }
+  @-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+  }
+  @keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+  }
 }

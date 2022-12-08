@@ -1,0 +1,19 @@
+$backgroundColour: #f4f1ec;
+$themeColour2: firebrick;
+$themeColour1: #4056A1;
+$borderColour: #545149;
+$bodyFontColour: #545149;
+$themeFont: "Bungee";
+$bodyFont: "Source Sans Pro"; 
+$defaultFont: sans-serif;
+
+@mixin alignColCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin alignSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
