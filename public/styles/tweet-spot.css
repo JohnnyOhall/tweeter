@@ -10,7 +10,7 @@ hr {
 }
 
 .tweet-head>div:nth-child(2) {
-  color: #aaa69a
+  color: #aaa69a;
 }
 
 article {
@@ -55,7 +55,7 @@ footer>div>div {
 p {
   margin: 5px;
   padding: 10px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .likes {
@@ -72,13 +72,28 @@ article:hover {
 }
 
 .fa-flag:hover {
-  color: goldenrod;
+  color: firebrick;
+  cursor: pointer;
 }
 
 .fa-retweet:hover {
-  color: goldenrod;
+  color: firebrick;
+  cursor: pointer;
 }
 
 .fa-heart:hover {
-  color: goldenrod;
+  color: firebrick;
+  cursor: pointer;
 }
+
+.fa-circle-up {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background-color: white;
+  color: firebrick;
+  border-radius: 100%;
+  font-size: 75px;
+  cursor: pointer;
+}
+

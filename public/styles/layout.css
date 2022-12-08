@@ -5,7 +5,6 @@
  */
 html {
   box-sizing: border-box;
-  /*font-family: sans-serif*/
 }
 
 *,
@@ -31,9 +30,5 @@ body {
 }
 
 .red {
-  color: red
+  color: firebrick;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

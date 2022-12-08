@@ -1,18 +1,24 @@
 $(document).ready(function () {
   const $newTweet = $('#new-tweet');
   const $revealTweet = $('#tweet-reveal');
+  const $topScroll = $('.fa-circle-up');
 
   loadTweets();
-  $newTweet.on('submit', tweetSubmitted);
-  $revealTweet.on('click', unhideMsgBox)
-
+  $newTweet.on('submit', tweetSubmitted); // on submit prevents page refresh completes AJAX req.
+  $revealTweet.on('click', unhideMsgBox); // Reveals the 
+  $topScroll.on('click', scrollToTop);  // Scroll to top of page on button press
 });
 
+// Escape code to prevent XSS attacks
 const escape = (str) => {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+}
 
 const unhideMsgBox = () => {
 
@@ -22,7 +28,7 @@ const unhideMsgBox = () => {
   } else {
     return $('.new-tweet').slideUp();
   }
-  
+
 }
 
 //Takes tweet submitted and loads to server without page
@@ -41,7 +47,7 @@ const tweetSubmitted = (e) => {
 
   const data = $('#new-tweet').serialize();
 
-  $.post('/tweets', data, () => {
+  $.post('/tweets', data, () => { // Posts submitted tweet to db
     $("#tweet-text").val('');
     $('#tweet-counter').text(140);
     loadTweets();
