@@ -1,4 +1,4 @@
-# Tweeter Project
+# Tweeter Project: John O'Halloran
 
 Tweeter is a simple, single-page Twitter clone.
 
