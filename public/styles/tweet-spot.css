@@ -68,7 +68,7 @@ footer {
 }
 
 article:hover {
-  box-shadow: 5px 5px #26241e;
+  box-shadow: 5px 5px #4056A1;
 }
 
 .fa-flag:hover {
@@ -87,6 +87,7 @@ article:hover {
 }
 
 .fa-circle-up {
+  display: none;
   position: fixed;
   bottom: 5%;
   right: 5%;

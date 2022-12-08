@@ -1,13 +1,19 @@
 .page-header {
   background-color: firebrick;
-  margin-top: 20px;
+  margin-top: 2%;
   margin-left: 2%; 
   width: 30%;
   float: left;
   position: fixed;
+  border-radius: 10%;
+}
+
+nav>span {
+  font-size: 50px;
 }
 
 .tweet-spot {
+  margin-top: 2%;
   width: 66.7%;
   float: right;
 }
@@ -20,4 +26,4 @@
 .container {
   margin-top: 120px;
   width: 95%;
-}
+} 

@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#tweet-text").on('input', changeFunc)
+  $(document).on('scroll', scrollFunc)
 });
 
 const changeFunc = function(e) {
@@ -14,5 +15,15 @@ const changeFunc = function(e) {
     output.addClass('red');
   } else {
     output.removeClass('red');
+  }
+}
+
+const scrollFunc = () => {
+  let page = $(document).scrollTop();
+
+  if (page > 400) {
+    $('.fa-circle-up').fadeIn();
+  } else {
+    $('.fa-circle-up').fadeOut();
   }
 }
